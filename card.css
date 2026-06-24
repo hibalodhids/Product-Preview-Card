@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    background-color: hsl(30, 38%, 92%);
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card {
+    max-width: 600px; 
+    width: 100%;
+    height: 450px; 
+    background-color: white;
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.crd1, .crd2 {
+    flex: 1 1 0%; 
+    height: 100%;
+}
+
+
+.crd1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.crd2 {
+    padding: 25px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+
+.crd2 h2 {
+    font-size: 12px;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+    letter-spacing: 5px;
+}
+
+.crd2 h1 {
+    font-weight: 700;
+    font-size: 2.3rem;
+    font-family: "Fraunces", serif;
+    line-height: 1.1;
+    color: hsl(212, 21%, 14%);
+}
+
+.crd2 p {
+    font-size: 16px;
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.currentprice {
+    font-size: 1.6rem;
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    color: hsl(158, 36%, 37%)
+}
+
+.oldprice {
+    font-size: 14px;
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+}
+
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+}
+@media (max-width: 768px) {
+    .card{
+        flex-direction: column;
+        max-width: 340px;
+        height: auto;
+    }
+    .crd1,.crd2{
+        width: 100%;
+        flex: none;
+    }
+    .crd1{
+        height: 280px;
+    }
+    .crd2{
+        padding: 24px;
+        gap: 15px;
+    }
+}
